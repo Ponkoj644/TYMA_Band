@@ -9,6 +9,7 @@
 }
 
 :root {
+  --color-primary: rgb(196, 153, 96);
   --color-white: #ffffff;
 }
 html {
@@ -34,7 +35,7 @@ a {
 
 /* Header CSS Start */
 .header-area .navbar-brand {
-  display: none ;
+  display: none;
 }
 
 .header-area .logo h3 {
@@ -60,20 +61,20 @@ a {
   font-size: 14px;
 }
 
-.navbar-area .nav-item:nth-child(4) {
+.navbar-area .nav-item:nth-child(5) {
   margin-left: 100px;
 
   & .fa-solid {
     margin-right: 5px !important;
   }
 }
+/* Header CSS End */
 
 /* Hero area CSS start */
 .hero-area {
   width: 100%;
   height: 80vh;
   min-height: 500px;
-  /* border-image: fill 0 liner-gradient(#0003, #0000); */
 
   background-image: url(../Images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -87,7 +88,7 @@ a {
   content: "";
   position: absolute;
   background-color: #252525;
-  opacity: 0.6;
+  opacity: 0.7;
   height: 100%;
   width: 100%;
   /* z-index: 1; */
@@ -106,39 +107,277 @@ a {
   font-weight: 700;
   text-align: center;
 }
-
 /* Hero area CSS end */
 
-/* Header CSS End */
+/* Brand Section Start */
+.brand-section {
+  padding: 70px 0;
 
+}
+.brand-section .heading {
+  position: relative;
+}
+.brand-section .heading::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  width: 5%;
+  height: 3px;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%);
+  transition: 0.4s all ease-in-out;
+  border-radius: 20px;
+}
+.brand-section:hover .heading::before {
+  width: 15%;
+  height: 5px;
+}
+.brand-section .heading h1 {
+  font-weight: 700;
+  text-align: center;
+}
+.brand-text h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.brand-text p {
+  line-height: 24px;
+  width: fit-content;
+  text-align: justify;
+  margin-right: 20px;
+}
+.brand-img img {
+  border-radius: 10px 10px 100px 10px;
+}
+/* Brand Section End */
+
+/* Shop Section Start */
+.shop-section {
+  padding: 70px;
+
+}
+.shop-section .heading {
+  position: relative;
+}
+.shop-section .heading::before {
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 50%;
+  width: 5%;
+  height: 3px;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%);
+  transition: 0.4s all ease-in-out;
+  border-radius: 20px;
+}
+.shop-section:hover .heading::before {
+  width: 15%;
+  height: 5px;
+}
+.shop-section .heading h1 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.shop-section .card {
+  background: var(--color-primary);
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  margin-bottom: 24px;
+}
+.shop-section .card:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.01);
+}
+
+.shop-section .card-content {
+  padding: 16px;
+  background-color: transparent transparent;
+}
+.shop-section .card-img {
+  width: 100%;
+  height: auto;
+}
+
+.shop-section .card-img img {
+  border-radius: 4px;
+}
+
+.shop-section .card-text {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.shop-section .card-text h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+.shop-section .card-text h3 {
+  font-size: 24px;
+  color: red;
+  margin: 0;
+  padding: 5px 0;
+}
+.shop-section .card-text p {
+  color: #252525;
+  margin: 0;
+  padding-bottom: 16px;
+}
+.shop-section .card-text a {
+  background: #fff;
+  color: #252525;
+  padding: 8px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.shop-section .card-text a:hover {
+  background-color: #252525;
+  color: #fff;
+}
+/* Shop Section End */
+
+/* Reviews Section Start */
+.review-section {
+  padding: 50px 0;
+
+}
+
+.review-section .heading {
+  position: relative;
+}
+.review-section .heading::before {
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 50%;
+  width: 5%;
+  height: 3px;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%);
+  transition: 0.4s all ease-in-out;
+  border-radius: 20px;
+}
+.review-section:hover .heading::before {
+  width: 15%;
+  height: 5px;
+}
+.review-section .heading h1 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.review-section .review-content {
+  padding: 16px;
+  background-color: #ffe4c4;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.review-section .review-content:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.01);
+}
+.review-section .review-content:hover .review-img {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.review-section .review-content:hover .review-text {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.review-section .review-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.review-section .review-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.review-section .review-text {
+  padding: 24px;
+  text-align: center;
+  background: var(--color-white);
+  margin: -10px 0 0 0;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.review-section .review-text h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.review-section .review-text h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(243, 115, 252);
+}
+
+.review-section .review-text p {
+  margin-top: 12px;
+}
+
+.review-section .rating .fas {
+  color: rgb(253, 180, 42);
+}
+
+/* Reviews Section End */
+
+/* Media Query */
 @media (max-width: 991px) {
-
-  .header-top{
+  /* Header CSS */
+  .header-top {
     justify-content: center;
   }
   .header-top .logo {
     display: none;
   }
 
-  .header-area .navbar-brand{
+  .header-area .navbar-brand {
     display: block;
   }
 
-  
-  .navbar-area .nav-item:nth-child(4) {
+  .navbar-area .nav-item:nth-child(5) {
     margin-left: 0px;
     display: inherit;
   }
+
+  .review-section .review-content {
+    margin-bottom: 20px;
+  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .hero-area h1 {
     font-size: 50px;
+  }
+
+  /* Brand CSS */
+
+  .brand-img {
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 320px) {
   .hero-area h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
